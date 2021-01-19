@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu</title>
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+
+	<!-- css personalizado da pagina -->
+	<link href="css/styles.css" rel="stylesheet">	
+</head>
+<body>
+	<div class="menu-container" >
+		
+		<header > SMART House
+			
+			<div class="icon-house">
+				<a href="home.html">
+					<i class="fad fa-house-signal"></i>
+				</a>
+			</div>
+
+			<div class="dropdown">
+				<i class="fad fa-user-circle"></i>
+				<div class="dropdown-content">
+					<a href="account.html"> 
+						<span class="account"> Entrar </span>
+					</a>
+					<a href="logout.html">
+						<span class="logout"> Sair </span>
+					</a>
+					<a href="register.html">
+						<span class="register"> Cadastrar </span>
+					</a>
+				</div>
+			</div>
+
+		</header>
+
+		<input type="checkbox" id="menu">
+		<label for="menu" class="menu-bar">
+			<i class="far fa-bars"></i>
+		</label>
+		
+
+		<aside>
+			<ul>
+				<li>
+					<a href="home.html">
+						<span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+						<span class="title"> Home </span>
+					</a>
+				</li>
+
+				<li>
+					<a href="cam.html">
+						<span class="icon"><i class="fas fa-cctv"></i></i></span>
+						<span class="title"> Cameras </span>
+					</a>
+				</li>
+
+				<li>
+					<a href="climate.html">
+						<span class="icon"><i class="far fa-thermometer-three-quarters"></i></span>
+						<span class="title"> Clima </span>
+					</a>
+				</li>
+
+				<li>
+					<a href="energy.html">
+						<span class="icon"><i class="fad fa-plug"></i></span>
+						<span class="title"> Energia </span>
+					</a>
+				</li>
+
+			</ul>
+		</aside>
+		
+		
+		<main>
+			<div class="home">
+				<div class="fire-system">  
+					<h2>Sistemas de Segurança</h2>
+					<div class="alarm background-standard">  
+						<div>
+							<span><svg><use xlink:href="images/sprites.svg#casa"></use></svg></span>
+
+							<!-- <span><i class="icon-up fad fa-house"></i></span> -->
+							<div>
+								<h5 class="text-test text-alarm">Alarme</h5>
+								<h6 class="status-alarm">Status</h6>
+							</div>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-alarm" class="checkbox-button" /> 
+								<label for="switch-alarm" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+						
+					</div>
+					<div class="smoke background-standard"> 
+						<div>
+							<span><svg><use xlink:href="images/sprites.svg#smoke-sensor"></use></svg></span>
+							<!-- <span><i class="icon-up fas fa-sensor-smoke"></i></span>  -->
+							<div>
+								<h5 class="text-test text-smoke">Detector de fumaça</h5>
+								<h6 class="status-smoke">Status</h6>
+							</div>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-smoke" class="checkbox-button" /> 
+								<label for="switch-smoke" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+					<div class="gas background-standard">  
+						<div>
+							<span><svg><use xlink:href="images/sprites.svg#gas-sensor"></use></svg></span>
+							<!-- <span><i class="icon-up fas fa-sensor-smoke"></i></span> -->
+							<div>
+								<h5 class="text-test text-gas">Detector de gas</h5>
+								<h6 class="status-gas">Status</h6>
+							</div>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-gas" class="checkbox-button" /> 
+								<label for="switch-gas" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="garage">  
+
+					<h2>Garagem</h2>
+					<div class="gate-garage background-standard">  
+						<div>
+							<span><i class="icon-up fas fa-torii-gate"></i></span>
+							<div>
+								<h5 class="text-test">Portão da grade</h5>
+								<h6 class="status">Status</h6>
+							</div>
+						</div>
+						<div class="load-gate"></div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-gate-garage" class="checkbox-button-oc" /> 
+								<label for="switch-gate-garage" class="toggle-button-oc">
+									<p>OPEN</p> 
+									<p>CLOSE</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+					<div class="grid-garage background-standard">  
+						<div>
+							<span><i class="icon-up fad fa-warehouse"></i></span>
+							<div>
+								<h5 class="text-test">Portão da garagem</h5>
+								<h6 class="status">Status</h6>
+							</div>
+						</div>
+						<div class="load-grid"></div>
+						<div>  
+							<div>
+								<input type="checkbox" id="switch-grid-garage" class="checkbox-button-oc" /> 
+								<label for="switch-grid-garage" class="toggle-button-oc">
+									<p>OPEN</p> 
+									<p>CLOSE</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="light-int background-standard">  
+					<h2>Luzes Interiores</h2>
+					<div id="list-int">
+						<ul>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Sala de jantar </span>
+								<!-- <h5 class="dining-room text-low">Sala de jantar</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-dining-room" class="checkbox-button" /> 
+										<label for="switch-dining-room" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Sala de estar </span>
+								<!-- <h5 class="living-room text-low">Sala de estar</h5> -->
+								<div> 
+									<div>
+										<input type="checkbox" id="switch-living-room" class="checkbox-button" /> 
+										<label for="switch-living-room" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div> 
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Cozinha </span>
+								<!-- <h5 class="kitchen text-low">Cozinha</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-kitchen" class="checkbox-button" /> 
+										<label for="switch-kitchen" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Suite de casal </span>
+								<!-- <h5 class="double-suite text-low">Suite de casal</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-double-suite" class="checkbox-button" /> 
+										<label for="switch-double-suite" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Banheiro da suíte </span>
+								<!-- <h5 class="suite-bathroom text-low">Banheiro da suíte</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-suite-bathroom" class="checkbox-button" /> 
+										<label for="switch-suite-bathroom" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Quarto </span>
+								<!-- <h5 class="bedroom text-low">Quarto</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-bedroom" class="checkbox-button" /> 
+										<label for="switch-bedroom" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><svg><use xlink:href="images/sprites.svg#led-lamp"></use></svg></span>
+								<!-- <span><i class="icon-low fas fa-lightbulb"></i></span> -->
+								<span class="text-low-int text-low"> Banheiro </span>
+								<!-- <h5 class="bathroom text-low">Banheiro</h5> -->
+								<div>
+									<div>
+										<input type="checkbox" id="switch-bathroom" class="checkbox-button" /> 
+										<label for="switch-bathroom" class="toggle-button">
+											<p>ON</p> 
+											<p>OFF</p>
+										</label> 
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="light-ext"> 
+
+					<h2>Luzes Exteriores</h2>
+					<div class="light-ext-front  background-standard">  
+						<div>
+							<span><i class="icon-low fas fa-lightbulb"></i></span>
+							<h5 class="text-test">Frente</h5>
+						</div>
+						
+						<div>
+							<div>
+								<input type="checkbox" id="switch" class="checkbox-button" /> 
+								<label for="switch" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+						
+					</div>
+					<div class="light-ext-back  background-standard">  
+						<div>
+							<span><i class="icon-low fas fa-lightbulb"></i></span>
+							<h5 class="text-test">Fundos</h5>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-ext-back" class="checkbox-button" /> 
+								<label for="switch-ext-back" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+					<div class="light-ext-hall  background-standard">  
+						<div>
+							<span><i class="icon-low fas fa-lightbulb"></i></span>
+							<h5 class="text-test">Corredor</h5>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-ext-hall" class="checkbox-button" /> 
+								<label for="switch-ext-hall" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label> 
+							</div>
+						</div>
+					</div>
+					<div class="light-ext-garage  background-standard">  
+						<div>
+							<span><i class="icon-low fas fa-lightbulb"></i></span>
+							<h5 class="text-test">Garagem</h5>
+						</div>
+						<div>
+							<div>
+								<input type="checkbox" id="switch-ext-garage" class="checkbox-button" /> 
+								<label for="switch-ext-garage" class="toggle-button">
+									<p>ON</p> 
+									<p>OFF</p>
+								</label>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- Fontawesome -->
+	<script src="js/fontawesomepro.js"></script>
+
+	<!-- Arquivo .js personalizado das paginas -->
+	<script src="js/styles.js"></script>
+</body>
+</html>
+
